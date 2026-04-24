@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Grocery List + Pantry | Ian Zeng</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="index.html">Ian Zeng</a>
+      </div>
+      <nav class="nav nav-pill">
+        <a class="pill" href="index.html#projects">Back</a>
+        <a class="pill" href="#overview">Overview</a>
+        <a class="pill" href="#research">Reasoning</a>
+        <a class="pill" href="#interaction">Design</a>
+        <a class="pill" href="#outcome">Outcome</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <section class="case-hero" id="overview">
+      <div class="case-hero-text">
+        <div class="eyebrow">DESKTOP APP • UI + INTERACTION</div>
+        <h1>Smart Grocery List + Pantry</h1>
+        <p class="lead">A Tkinter desktop app that helps people plan shopping, track pantry freshness, and avoid waste. The focus is a clear multi-view flow (Home → To Buy → Pantry), fast entry via icons, and guardrails for messy inputs.</p>
+        <div class="meta-row">
+          <div class="meta-card"><div class="meta-k">Platform</div><div class="meta-v">Desktop app</div></div>
+          <div class="meta-card"><div class="meta-k">Work</div><div class="meta-v">Interaction design, UI layout, implementation</div></div>
+          <div class="meta-card"><div class="meta-k">Tools</div><div class="meta-v">Python, Tkinter</div></div>
+        </div>
+      </div>
+      <div class="case-hero-media">
+        <figure class="case-figure">
+          <img src="assets/projects/grocery/grocery-tobuy.png" alt="To Buy screen with list, quick-add items, and import/export actions" loading="lazy" />
+          <figcaption>To Buy view: list + quick actions + frequent items for fast input.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Context / Problem</h2>
+      <p>When shopping and pantry tracking happen in separate places (notes app, receipts, memory), it is easy to forget what to buy, lose track of what is at home, and miss expiry dates. I built a single flow that keeps planning and pantry status connected, without turning it into a heavy setup process.</p>
+    </section>
+
+    <section class="case-section" id="research">
+      <h2>Users & core tasks</h2>
+      <ul class="bullets">
+        <li>Add items quickly while planning (often in short bursts).</li>
+        <li>Move purchased items into Pantry and see freshness / time-left at a glance.</li>
+        <li>Edit quantities or expiry dates without losing the list structure.</li>
+        <li>Import/export a list for reuse (CSV) and recover from mistakes.</li>
+      </ul>
+
+      <h3>Constraints / environment</h3>
+      <ul class="bullets">
+        <li>Desktop GUI constraints: window-based navigation and limited screen space.</li>
+        <li>User input is messy (typos, blank fields, invalid dates), so the UI needs guardrails.</li>
+        <li>State must stay consistent across views (To Buy ↔ Pantry) so users do not get lost.</li>
+      </ul>
+    </section>
+
+    <section class="case-section" id="interaction">
+      <h2>Key interaction decisions</h2>
+      <div class="cards-3">
+        <div class="card">
+          <h3>Clear navigation model</h3>
+          <p>Home communicates the workflow first, then offers direct entry to To Buy / Pantry. The top nav keeps location obvious so users can switch views without a dead-end.</p>
+        </div>
+        <div class="card">
+          <h3>Fast entry with icons</h3>
+          <p>Frequent items act like shortcut buttons. This reduces typing and keeps the interaction predictable when adding common groceries.</p>
+        </div>
+        <div class="card">
+          <h3>Feedback + error prevention</h3>
+          <p>Input validation and message feedback prevent silent failures (invalid dates, missing item names). Edits and deletes are explicit actions to reduce accidental changes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Screens</h2>
+      <div class="gallery three">
+        <figure class="case-figure">
+          <img src="assets/projects/grocery/grocery-home.png" alt="Home screen with workflow description and primary actions" loading="lazy" />
+          <figcaption>Home: explains the workflow and offers two clear entry points.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="assets/projects/grocery/grocery-tobuy.png" alt="To Buy screen with add/edit/delete, search, frequent items, and CSV actions" loading="lazy" />
+          <figcaption>To Buy: quick actions, search, frequent-item shortcuts, CSV import/export.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="assets/projects/grocery/grocery-pantry.png" alt="Pantry screen with remaining days left for each item" loading="lazy" />
+          <figcaption>Pantry: shows time-left so freshness status is readable at a glance.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section" id="outcome">
+      <h2>Outcome</h2>
+      <p>A working desktop prototype with a stable Home → To Buy → Pantry flow, quick-add shortcuts, CSV import/export, and expiry tracking. The design goal was not “more features,” but fewer moments where the user has to stop and think about what the system expects.</p>
+
+      <h3>What I learned</h3>
+      <p>Even in a simple desktop tool, navigation and feedback states matter as much as visual layout. Clear guardrails (validation, consistent actions, predictable view changes) make the product feel calmer and more trustworthy.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Ian Zeng</p>
+      <a class="footer-link" href="index.html#projects">Back to projects</a>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

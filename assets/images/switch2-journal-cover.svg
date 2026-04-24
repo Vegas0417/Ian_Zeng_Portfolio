@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="36" fill="url(#g)"/>
+  <rect x="70" y="90" width="1060" height="495" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+  <text x="110" y="190" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="44" font-weight="700">Nintendo Switch 2</text>
+  <text x="110" y="245" fill="rgba(255,255,255,0.85)" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="28">Design Journal</text>
+  <text x="110" y="320" fill="rgba(255,255,255,0.75)" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="22">Interface critique · Interaction analysis · UI clarity</text>
+  <g transform="translate(110,380)">
+    <rect width="240" height="56" rx="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.22)"/>
+    <text x="24" y="36" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="20" font-weight="600">Open PDF</text>
+  </g>
+  <text x="110" y="560" fill="rgba(255,255,255,0.55)" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="18">Artifact</text>
+</svg>

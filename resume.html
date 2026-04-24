@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume | Ian Zeng</title>
+  <meta name="description" content="Ian Zeng resume.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ian Zeng</a>
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="case-study.html">Case study</a>
+        <a class="active" href="resume.html">Resume</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1 class="h2">Resume</h1>
+        <p class="muted">
+          Photo and personal contact info are optional. For privacy, use a safe email and remove home address and phone number.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="resume-actions">
+          <a class="btn primary" href="assets/Ian_Zeng_Resume.pdf" download>Download PDF</a>
+          <a class="btn" href="assets/Ian_Zeng_Resume.pdf" target="_blank" rel="noreferrer">Open in new tab</a>
+        </div>
+
+        <div class="resume-frame">
+          <iframe title="Resume PDF" src="assets/Ian_Zeng_Resume.pdf"></iframe>
+        </div>
+
+        <p class="muted small">
+          Replace assets/Ian_Zeng_Resume.pdf with your actual resume file. Keep the file name the same, or update the links above.
+        </p>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted small">© <span id="year"></span> Ian Zeng</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="case-study.html">Case study</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

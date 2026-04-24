@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Study | Crack the Code</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Crack the Code case study: game UI feedback loops and state tracking." />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="index.html">Ian Zeng</a>
+      </div>
+      <nav class="nav" aria-label="Case study navigation">
+        <a class="nav-pill" href="index.html">Back</a>
+        <a class="nav-pill" href="#overview">Overview</a>
+        <a class="nav-pill" href="#research">Research</a>
+        <a class="nav-pill" href="#screens">Screens</a>
+        <a class="nav-pill" href="#decisions">Design</a>
+        <a class="nav-pill" href="#outcome">Outcome</a>
+        <a class="nav-pill" href="#demo">Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="case">
+    <section class="case-hero">
+      <div class="container case-hero-grid">
+        <div>
+          <p class="kicker">UX CASE STUDY</p>
+          <h1>Crack the Code</h1>
+          <p class="lead">
+            A Bulls and Cows style web game where each round turns feedback into the next best guess.
+            The goal was to make the loop feel readable: clear feedback, clear next step, and a stable game state.
+          </p>
+
+          <div class="case-meta">
+            <div class="meta-card">
+              <p class="meta-label">Platform</p>
+              <p class="meta-value">Web app · Interaction game</p>
+            </div>
+            <div class="meta-card">
+              <p class="meta-label">Team</p>
+              <p class="meta-value">4 people</p>
+            </div>
+            <div class="meta-card">
+              <p class="meta-label">Focus</p>
+              <p class="meta-value">Feedback loops · State tracking · UI clarity</p>
+            </div>
+          </div>
+
+          <div class="callouts">
+            <div class="callout">
+              <p class="callout-title">My role</p>
+              <p class="muted">
+                Interaction + UI logic. I helped define the feedback model (exact vs misplaced), implemented the round loop,
+                and made sure the interface always shows what changed after each guess.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="case-hero-figure">
+          <img src="assets/projects/crack-the-code/title.png" alt="Crack the Code title slide" />
+          <figcaption>Project framing and goal: a readable guessing loop powered by feedback.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="overview" class="case-section">
+      <div class="container">
+        <h2>Context / Problem</h2>
+        <div class="two-col">
+          <div class="card soft">
+            <h3>What the user is trying to do</h3>
+            <ul class="list">
+              <li>Make a guess quickly</li>
+              <li>Understand feedback immediately</li>
+              <li>Use that feedback to decide the next guess</li>
+              <li>See progress and avoid getting lost mid-game</li>
+            </ul>
+          </div>
+          <div class="card soft">
+            <h3>Where it can break</h3>
+            <ul class="list">
+              <li>Feedback is easy to misread (exact vs misplaced)</li>
+              <li>Users forget past guesses or what changed</li>
+              <li>State can desync (history, turns left, current guess)</li>
+              <li>The game feels random if the logic is not explainable</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+        <h3>Users & Core Tasks</h3>
+        <p class="muted">
+          The primary user is anyone playing a quick logic game in the browser. Core tasks are guessing, reading feedback,
+          and using history to plan the next step.
+        </p>
+
+        <div class="spacer"></div>
+        <h3>Constraints / Environment</h3>
+        <ul class="list">
+          <li>Runs in-browser with lightweight UI components</li>
+          <li>Four-character code with no repeated digits, from 1 to 9</li>
+          <li>Feedback must be consistent and trustworthy every round</li>
+          <li>Need a clear reset and mode switch without losing the user</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="research" class="case-section">
+      <div class="container">
+        <h2>Research / Evidence or Reasoning</h2>
+        <p>
+          We treated the game as a feedback system. The UI is only useful if the feedback is unambiguous and the state stays consistent.
+          We also compared two guessing approaches for the computer mode: a random strategy vs. a feedback filtering strategy.
+        </p>
+
+        <div class="case-media">
+          <figure class="media">
+            <img src="assets/projects/crack-the-code/strategy.png" alt="Strategy comparison: random vs feedback filtering" />
+            <figcaption>Why feedback filtering matters: it narrows the search space using the same rules the player sees.</figcaption>
+          </figure>
+        </div>
+
+        <div class="card soft">
+          <h3>Key takeaway</h3>
+          <p class="muted">
+            If the interface shows exact vs misplaced clearly, and the computer follows the same feedback logic,
+            the game feels fair and learnable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="screens" class="case-section">
+      <div class="container">
+        <h2>Screens</h2>
+        <div class="gallery two">
+          <figure>
+            <img src="assets/crack/how-to-play.png" alt="How to Play modal with rules and feedback legend" loading="lazy">
+            <figcaption>Help modal that keeps rules visible and reduces onboarding friction.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/crack/gameplay.png" alt="Gameplay screen showing guesses, feedback chips, and win state" loading="lazy">
+            <figcaption>Round-based gameplay with two guess columns and inline feedback chips.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="decisions" class="case-section">
+      <div class="container">
+        <h2>Key Interaction Decisions</h2>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Make feedback scannable</h3>
+            <p class="muted">
+              Each round returns two signals: exact matches and misplaced matches. Instead of text-heavy explanations,
+              the UI uses simple, repeated visuals so users can scan and move.
+            </p>
+            <div class="icon-row" aria-label="Feedback icons">
+              <div class="icon-item">
+                <img src="demos/crack-the-code/assets/feedback_exact.svg" alt="Exact match icon" />
+                <p class="small muted">Exact</p>
+              </div>
+              <div class="icon-item">
+                <img src="demos/crack-the-code/assets/feedback_misplaced.svg" alt="Misplaced match icon" />
+                <p class="small muted">Misplaced</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Keep the mental model stable</h3>
+            <p class="muted">
+              The layout keeps the same structure across the whole session: input, submit, feedback, and history.
+              When something changes, it changes in one place.
+            </p>
+            <ul class="list">
+              <li>History list shows the guess and feedback together</li>
+              <li>Turns are visible so users can pace risk vs certainty</li>
+              <li>Reset and help are always available</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="card soft">
+          <h3>Game flow</h3>
+          <p class="muted">
+            The interaction is one tight loop: guess, validate, show feedback, update state, repeat.
+            This helped keep both player mode and computer mode consistent.
+          </p>
+          <figure class="media">
+            <img src="assets/projects/crack-the-code/flow.png" alt="Game flow diagram" />
+            <figcaption>A single loop makes the experience predictable and easy to learn.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="outcome" class="case-section">
+      <div class="container">
+        <h2>Outcome</h2>
+        <div class="two-col">
+          <div class="card">
+            <h3>Player experience</h3>
+            <ul class="list">
+              <li>Clear round-by-round feedback (exact vs misplaced)</li>
+              <li>History keeps progress visible</li>
+              <li>Stable state: no surprises when switching actions</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>System behavior</h3>
+            <ul class="list">
+              <li>Computer mode filters candidates based on feedback</li>
+              <li>Designed to converge within a small number of turns</li>
+              <li>Logic and UI stay aligned so outcomes feel fair</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+        <div class="card soft">
+          <h3>What I learned</h3>
+          <p class="muted">
+            Even a small game becomes confusing if feedback or state is inconsistent.
+            Building the loop forced me to treat UI as a contract: every round must be explainable, repeatable, and easy to recover from.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="case-section">
+      <div class="container">
+        <h2>Demo</h2>
+        <p class="muted">
+          Open the playable prototype. It runs fully in the browser.
+        </p>
+        <div class="project-actions">
+          <a class="btn" href="demos/crack-the-code/index.html">Open demo</a>
+          <a class="btn secondary" href="index.html#projects">Back to projects</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted small">© Ian Zeng</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

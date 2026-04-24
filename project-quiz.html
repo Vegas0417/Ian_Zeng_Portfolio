@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Study | Console Quiz Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+    <span class="orb o4"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Ian Zeng</div>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-pill" href="index.html#projects">Back</a>
+        <a class="nav-pill" href="#overview">Overview</a>
+        <a class="nav-pill" href="#screens">Screens</a>
+        <a class="nav-pill" href="#decisions">Decisions</a>
+        <a class="nav-pill" href="#outcome">Outcome</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="case-hero" id="overview">
+      <div class="case-hero-text">
+        <div class="kicker">UI PROJECT</div>
+        <h1>Console Quiz Builder</h1>
+        <p class="lead">
+          A text-based quiz app that keeps the flow predictable: build questions, save/load sets, then play and review results.
+        </p>
+
+        <div class="case-metadata">
+          <div class="meta-box"><div class="meta-num">Desktop</div><div class="meta-label">platform</div></div>
+          <div class="meta-box"><div class="meta-num">Console UI</div><div class="meta-label">interaction style</div></div>
+          <div class="meta-box"><div class="meta-num">Python</div><div class="meta-label">implementation</div></div>
+        </div>
+
+        <div class="case-role">
+          <h2>My role</h2>
+          <p>
+            Designed the menu structure and prompts, implemented the full program flow, and refined error handling and feedback to reduce user confusion during input-heavy steps.
+          </p>
+        </div>
+      </div>
+
+      <div class="case-hero-media">
+        <figure class="case-figure">
+          <img src="assets/quiz/quiz_build.png" alt="Console quiz builder: build mode and add question flow" />
+          <figcaption>Build mode: add a question with guided prompts and confirmation.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section" id="context">
+      <h2>Context / Problem</h2>
+      <p>
+        Console tools are fast to run, but they get frustrating when the menu hierarchy is unclear, inputs are easy to mess up, or the app gives weak feedback. I treated this as an interface design problem: keep navigation consistent, make input steps obvious, and always show what happened after an action.
+      </p>
+    </section>
+
+    <section class="case-section" id="users">
+      <h2>Users &amp; Core Tasks</h2>
+      <ul>
+        <li>Create and edit a question set quickly.</li>
+        <li>Reuse question sets by saving/loading from a file.</li>
+        <li>Play a quiz with clear scoring and the option to replay.</li>
+      </ul>
+    </section>
+
+    <section class="case-section" id="constraints">
+      <h2>Constraints / Environment</h2>
+      <ul>
+        <li>Text-only interface, keyboard input only.</li>
+        <li>User input is messy (typos, wrong menu numbers), so the UI needs guardrails.</li>
+        <li>Must preserve state between modes and keep the user oriented.</li>
+      </ul>
+    </section>
+
+    <section class="case-section" id="screens">
+      <h2>Screens</h2>
+      <div class="gallery two">
+        <figure class="case-figure">
+          <img src="assets/quiz/quiz_build.png" alt="Build mode flow showing add question and confirmation" />
+          <figcaption>Guided input: one question at a time, with explicit confirmation.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="assets/quiz/quiz_play.png" alt="Play mode flow showing results and replay prompt" />
+          <figcaption>Play flow: shows correct answer vs. user answer, then a simple replay decision.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section" id="decisions">
+      <h2>Key Interaction Decisions</h2>
+      <div class="callouts">
+        <div class="callout">
+          <h3>Consistent navigation</h3>
+          <p>
+            Main menu and sub-menus always use numbered/lettered options, with a clear back option. This keeps the mental model stable across modes.
+          </p>
+        </div>
+        <div class="callout">
+          <h3>Input guardrails</h3>
+          <p>
+            Prompts are explicit about the expected range (e.g., 1–4). After each action, the UI confirms what was added or changed.
+          </p>
+        </div>
+        <div class="callout">
+          <h3>Feedback that reduces anxiety</h3>
+          <p>
+            In play mode, the app shows correctness immediately and summarizes the score at the end, so users never wonder if their input was recorded.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" id="outcome">
+      <h2>Outcome</h2>
+      <p>
+        The result is a small but complete console interface that supports the full loop: build, persist, play, and replay. The UI stays predictable even when users make mistakes, because every step has a clear next action and a clear response from the system.
+      </p>
+
+      <h2>What I learned</h2>
+      <p>
+        Even without visuals, interaction design still matters. The same UX fundamentals apply: reduce ambiguity, make state visible, and design for recovery.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-footer">
+        <a class="btn" href="index.html#projects">Back to projects</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

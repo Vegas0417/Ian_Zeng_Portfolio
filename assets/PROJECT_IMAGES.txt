@@ -1,0 +1,10 @@
+Add optional images (JPG/PNG) into this folder with these names:
+project-greenp.jpg
+project-quizbuilder.jpg
+project-switch2.jpg
+project-grocery.jpg
+project-crackthecode.jpg
+project-prototypevideo.jpg
+
+Optional headshot:
+headshot.jpg

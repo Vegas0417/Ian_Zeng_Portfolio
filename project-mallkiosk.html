@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mall Directory Kiosk Prototype | Ian Zeng</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <a href="index.html" class="brand-link">Ian Zeng</a>
+        </div>
+        <nav class="nav" aria-label="Case study navigation">
+          <a class="pill-nav" href="index.html#projects">Back</a>
+          <a class="pill-nav" href="#overview">Overview</a>
+          <a class="pill-nav" href="#reasoning">Reasoning</a>
+          <a class="pill-nav" href="#design">Design</a>
+          <a class="pill-nav" href="#outcome">Outcome</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="case-hero section" id="overview">
+        <div class="container case-hero-grid">
+          <div>
+            <p class="eyebrow">Prototype</p>
+            <h1>Mall Directory Kiosk Prototype</h1>
+            <p class="lead">
+              A kiosk UI concept focused on fast store discovery and clear next steps. Built as an interactive prototype
+              to explore search, category browsing, and route guidance.
+            </p>
+
+            <div class="case-meta">
+              <div class="meta-block">
+                <div class="meta-label">Platform</div>
+                <div class="meta-value">System UI (kiosk)</div>
+              </div>
+              <div class="meta-block">
+                <div class="meta-label">Work</div>
+                <div class="meta-value">Interface design, interaction flows, prototyping</div>
+              </div>
+              <div class="meta-block">
+                <div class="meta-label">Tools</div>
+                <div class="meta-value">Figma</div>
+              </div>
+            </div>
+
+            <div class="callouts">
+              <div class="callout">
+                <h3>Problem</h3>
+                <p>
+                  Mall kiosks often feel slow and confusing when people are in a hurry. Users need to find a store
+                  quickly, confirm they picked the right one, and get a clear path without backtracking.
+                </p>
+              </div>
+              <div class="callout">
+                <h3>Goal</h3>
+                <p>
+                  Make the find → route flow predictable: clear entry points, readable results, and a direction view that
+                  reduces decision fatigue.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-hero-media">
+            <div class="media-card">
+              <div class="media-caption">Artifacts (PDF)</div>
+              <a class="btn" href="assets/inf353-mall-kiosk.pdf" target="_blank" rel="noopener">Open PDF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reasoning">
+        <div class="container">
+          <h2>Reasoning</h2>
+          <div class="cards-grid">
+            <article class="card">
+              <h3>Users and core tasks</h3>
+              <ul>
+                <li>Search a store by name</li>
+                <li>Browse by category when the name is unknown</li>
+                <li>Confirm the right destination with helpful details</li>
+                <li>Get a clear route and next step</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Constraints</h3>
+              <ul>
+                <li>Public setting: quick decisions, minimal typing</li>
+                <li>Glare and distance: high readability</li>
+                <li>Short sessions: simple navigation and recovery</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Design focus</h3>
+              <ul>
+                <li>Strong information hierarchy and large tap targets</li>
+                <li>Clear state changes and feedback</li>
+                <li>Consistent back paths and breadcrumbs</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="design">
+        <div class="container">
+          <h2>Key interaction decisions</h2>
+          <div class="decision-grid">
+            <article class="card decision">
+              <h3>Two entry modes: Search + Browse</h3>
+              <p>
+                Search supports people who know the destination. Browse supports people who only know a category.
+                Both routes lead to the same store detail view.
+              </p>
+            </article>
+            <article class="card decision">
+              <h3>Store detail as confirmation step</h3>
+              <p>
+                Before routing, show the store name, category, and a small location hint. This reduces mis-navigation
+                and makes the next action feel safer.
+              </p>
+            </article>
+            <article class="card decision">
+              <h3>Route view keeps one clear next action</h3>
+              <p>
+                The route screen prioritizes the first step and a simple overview. No extra options that compete with
+                the primary goal.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="outcome">
+        <div class="container">
+          <h2>Outcome</h2>
+          <p>
+            A clean prototype that communicates a predictable flow and makes the kiosk feel calmer: fewer decisions per
+            screen, clearer recovery, and faster store confirmation.
+          </p>
+          <h3 class="mt">What I learned</h3>
+          <p>
+            Kiosk UX is about speed and confidence. When the hierarchy is strong and the back path is obvious, people
+            move faster without feeling rushed.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

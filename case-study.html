@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Study | Green P Parking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+    <span class="orb o4"></span>
+  </div>
+
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html#work">Ian Zeng</a>
+    <nav class="nav" aria-label="Case study navigation">
+      <a class="nav-btn" href="index.html#work">Back</a>
+      <a class="nav-link" href="#overview">Overview</a>
+      <a class="nav-link" href="#research">Research</a>
+      <a class="nav-link" href="#design">Design</a>
+      <a class="nav-link" href="#outcomes">Outcomes</a>
+      <a class="nav-link" href="#reflection">Reflection</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main" class="case">
+    <section class="case-hero" id="overview">
+      <div class="container case-hero-inner">
+        <div class="case-hero-text">
+          <p class="kicker">UX case study</p>
+          <h1>Improving the UX of Green P Parking Machines</h1>
+          <p class="lead">
+            A research-driven redesign focused on clearer payment feedback, better screen visibility, and more reliable touch interactions.
+          </p>
+
+          <div class="pills" aria-label="Methods">
+            <span class="pill">User research</span>
+            <span class="pill">Journey mapping</span>
+            <span class="pill">Prototyping</span>
+            <span class="pill">Usability evaluation</span>
+          </div>
+
+          <div class="kpi-row" aria-label="Project summary">
+            <div class="kpi">
+              <div class="kpi-num">5</div>
+              <div class="kpi-label">team size</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">61</div>
+              <div class="kpi-label">participants</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">4</div>
+              <div class="kpi-label">core improvements</div>
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>My role</strong><br>
+            Research synthesis, interaction design, rapid prototyping, and evaluation. I led key artifacts (persona, empathy map, scenarios),
+            supported survey and interview work, and helped drive ideation and iteration.
+          </div>
+        </div>
+
+        <figure class="case-hero-media">
+          <img class="case-img" src="assets/greenp/hero.png" alt="Final UI direction: simplified start screen with clearer choices">
+          <figcaption class="caption">Final UI direction: simplified start screen with clearer choices.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Problem and goal</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Problem</h3>
+            <p>
+              Green P machines are often used in high-pressure moments: bad weather, bright sunlight, and short time windows.
+              Users reported three recurring issues: poor screen visibility, unreliable touch response, and unclear payment confirmation.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Goal</h3>
+            <p>
+              Reduce uncertainty during payment by improving visibility, preventing mis-taps, and adding reliable confirmation.
+              The experience should feel fast, safe, and easy to recover when something goes wrong.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="research">
+      <div class="container">
+        <h2>Research</h2>
+        <div class="split">
+          <div>
+            <p>
+              We combined a short online survey with semi-structured interviews to understand common breakdowns in real use.
+              In total, we collected 46 survey responses and ran 15 interviews.
+            </p>
+            <h3>What we learned</h3>
+            <ul class="list">
+              <li><strong>Visibility</strong>: glare and low contrast cause guessing and re-checking.</li>
+              <li><strong>Interaction reliability</strong>: laggy response leads to double taps and restarts.</li>
+              <li><strong>Feedback</strong>: unclear payment confirmation makes users worry about tickets or double charges.</li>
+              <li><strong>Recovery</strong>: when payment fails, users do not know the best next step.</li>
+            </ul>
+          </div>
+
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/surveyform.jpg" alt="Survey setup screenshot showing sample questions">
+            <figcaption class="caption">Survey setup example (Google Forms).</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Synthesis artifacts</h2>
+        <p class="muted">We turned raw research into clear, reusable artifacts for the team.</p>
+
+        <div class="gallery three">
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/persona.png" alt="Persona poster for Megan Park">
+            <figcaption class="caption">Persona</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/empathymap.png" alt="Empathy map summary">
+            <figcaption class="caption">Empathy map</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/needstatements.png" alt="Need statements list">
+            <figcaption class="caption">Need statements</figcaption>
+          </figure>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="gallery two">
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/asisscenario.png" alt="As-is scenario map of current Green P machine experience">
+            <figcaption class="caption">As-is scenario</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/tobescenario.png" alt="To-be scenario map for improved Green P machine experience">
+            <figcaption class="caption">To-be scenario</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="design">
+      <div class="container">
+        <h2>Ideation</h2>
+        <div class="split">
+          <div>
+            <p>
+              We generated ideas, then voted using an impact vs feasibility grid to pick a focused set of improvements.
+              This helped us move fast without losing the user problems.
+            </p>
+            <ul class="list">
+              <li>Quick wins: small changes that reduce errors right away.</li>
+              <li>Home runs: larger changes that increase confidence and clarity.</li>
+            </ul>
+          </div>
+
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/grid.png" alt="Impact vs feasibility grid with voted concepts">
+            <figcaption class="caption">Impact vs feasibility voting.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Prototyping</h2>
+        <p class="muted">
+          We moved from low-fidelity sketches to a clearer mid-fidelity flow that supports daylight readability, zoom, and confirmation.
+        </p>
+
+        <div class="gallery two">
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/lowfi1.png" alt="Low-fi storyboard: Day Mode for bright daylight">
+            <figcaption class="caption">Low-fi: Day Mode flow</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/lowfi2.png" alt="Low-fi storyboard: Pop-up zoom for important information">
+            <figcaption class="caption">Low-fi: Pop-up zoom</figcaption>
+          </figure>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="gallery two">
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/lowfi3.png" alt="Low-fi storyboard: Confirmation pop-up">
+            <figcaption class="caption">Low-fi: Confirmation pop-up</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/lowfi4.png" alt="Low-fi storyboard: Text receipt after payment">
+            <figcaption class="caption">Low-fi: Text receipt</figcaption>
+          </figure>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <figure class="figure">
+          <img class="case-img" src="assets/greenp/medfi.png" alt="Mid-fidelity prototype screens showing the updated payment flow">
+          <figcaption class="caption">Mid-fidelity prototype</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Usability evaluation</h2>
+        <div class="split">
+          <div>
+            <p>
+              We tested the prototype to confirm whether key steps felt clear, fast, and error-proof.
+              We also captured what worked, what to change, and new ideas.
+            </p>
+            <ul class="list">
+              <li>People liked the overall flow once they learned it.</li>
+              <li>Users wanted more obvious controls before entering special modes.</li>
+              <li>Confirmation needed to show key details before final submit.</li>
+            </ul>
+          </div>
+          <figure class="figure">
+            <img class="case-img" src="assets/greenp/evaluation.png" alt="Evaluation board with things that worked and things to change">
+            <figcaption class="caption">Evaluation synthesis board</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="outcomes">
+      <div class="container">
+        <h2>Final outcomes</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>1. Day Mode for bright daylight</h3>
+            <p>One tap increases contrast and readability so users stop guessing under glare.</p>
+          </div>
+          <div class="card">
+            <h3>2. Pop-up zoom for key details</h3>
+            <p>Tap any critical info to enlarge and verify, reducing misreads and wrong payments.</p>
+          </div>
+          <div class="card">
+            <h3>3. Confirmation before payment</h3>
+            <p>A clear final check shows key details and prevents rushed mistakes.</p>
+          </div>
+          <div class="card">
+            <h3>4. Text receipt after payment</h3>
+            <p>Immediate SMS confirmation gives reassurance even after walking away.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="reflection">
+      <div class="container">
+        <h2>Reflection and what I learned</h2>
+        <div class="split">
+          <div>
+            <p>
+              This project helped me connect the course tools to real-world constraints.
+              A parking machine is a public system, so small usability gaps quickly turn into stress and errors.
+            </p>
+            <h3>Key takeaways</h3>
+            <ul class="list">
+              <li>Affordances and signifiers matter most under glare and time pressure.</li>
+              <li>Feedback and confirmation reduce anxiety and prevent double actions.</li>
+              <li>Constraints and error prevention beat long instructions.</li>
+              <li>Design for recovery paths, not only the happy path.</li>
+              <li>Evaluation is not decoration, it is how the design earns trust.</li>
+            </ul>
+          </div>
+          <div class="note">
+            <strong>Moving forward</strong><br>
+            I want to keep using quick research cycles, clear synthesis, and iterative prototyping.
+            In future work, I will measure success with both task outcomes (time, errors) and confidence signals (clarity, reassurance).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="hero-cta">
+          <a class="chip" href="index.html#work">Back to work</a>
+          <a class="chip" href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Ian Zeng</p>
+      <div class="footer-links">
+        <a href="mailto:vegasss0417@gmail.com">vegasss0417@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
